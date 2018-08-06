@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "Student+CoreDataClass.h"
+#import "CoreDataManager.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) CoreDataManager *coreDataManager;
 
 @end
 
@@ -17,13 +21,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.coreDataManager = ({
+        CoreDataManager *manager = [[CoreDataManager alloc] init];
+        [manager createSqlite:@"Model" error:nil];
+        
+        manager;
+    });
+    
+//    [self.coreDataManager addData:@"Student" model:^(NSObject *model) {
+//        if ([model isKindOfClass:[Student class]]) {
+//            Student *lzy = (Student *)model;
+//            lzy.name = @"fnd";
+//            lzy.age = 10;
+//        }
+//    } error:^(NSString *error) {
+//        NSLog(@"%@",error);
+//    }];
+    
+    [self.coreDataManager deleteData:@"Student" predicate:nil error:nil];
+    
+    NSLog(@"%@",[self.coreDataManager readData:@"Student" predicate:nil error:nil]);
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

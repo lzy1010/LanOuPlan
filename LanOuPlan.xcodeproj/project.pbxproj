@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360A3C9D21183285007AE20C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 360A3C9B21183284007AE20C /* Model.xcdatamodeld */; };
+		360A3CAA211847E4007AE20C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A3CA9211847E4007AE20C /* CoreDataManager.m */; };
 		36290556211051B000FACBCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290555211051B000FACBCD /* AppDelegate.m */; };
 		36290559211051B000FACBCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290558211051B000FACBCD /* ViewController.m */; };
 		3629055C211051B000FACBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3629055A211051B000FACBCD /* Main.storyboard */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360A3C9C21183284007AE20C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		360A3CA8211847E4007AE20C /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		360A3CA9211847E4007AE20C /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		36290551211051B000FACBCD /* LanOuPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanOuPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36290554211051B000FACBCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36290555211051B000FACBCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360A3C9A21183284007AE20C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				360A3C9B21183284007AE20C /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		36290548211051B000FACBCD = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +114,13 @@
 		36290553211051B000FACBCD /* LanOuPlan */ = {
 			isa = PBXGroup;
 			children = (
+				360A3C9A21183284007AE20C /* CoreData */,
 				36290554211051B000FACBCD /* AppDelegate.h */,
 				36290555211051B000FACBCD /* AppDelegate.m */,
 				36290557211051B000FACBCD /* ViewController.h */,
 				36290558211051B000FACBCD /* ViewController.m */,
+				360A3CA8211847E4007AE20C /* CoreDataManager.h */,
+				360A3CA9211847E4007AE20C /* CoreDataManager.m */,
 				3629055A211051B000FACBCD /* Main.storyboard */,
 				3629055D211051B200FACBCD /* Assets.xcassets */,
 				3629055F211051B200FACBCD /* LaunchScreen.storyboard */,
@@ -264,7 +280,9 @@
 			files = (
 				36290559211051B000FACBCD /* ViewController.m in Sources */,
 				36290564211051B200FACBCD /* main.m in Sources */,
+				360A3CAA211847E4007AE20C /* CoreDataManager.m in Sources */,
 				36290556211051B000FACBCD /* AppDelegate.m in Sources */,
+				360A3C9D21183285007AE20C /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,13 +454,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVNM4ESZ25;
 				INFOPLIST_FILE = LanOuPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.LanOuPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,13 +472,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVNM4ESZ25;
 				INFOPLIST_FILE = LanOuPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.LanOuPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -577,6 +597,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		360A3C9B21183284007AE20C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				360A3C9C21183284007AE20C /* Model.xcdatamodel */,
+			);
+			currentVersion = 360A3C9C21183284007AE20C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 36290549211051B000FACBCD /* Project object */;
 }
