@@ -26,6 +26,7 @@
     self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     // 指定本地的 sqlite 数据库文件
     NSURL *sqliteURL = [[self documentDirectoryURL] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",source]];
+    NSLog(@"%@",sqliteURL.absoluteString);
     NSError *error;
     // 为 persistentStoreCoordinator 指定本地存储的类型，这里指定的是 SQLite
     [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType

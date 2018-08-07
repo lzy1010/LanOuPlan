@@ -39,9 +39,13 @@
 //        NSLog(@"%@",error);
 //    }];
     
-    [self.coreDataManager deleteData:@"Student" predicate:nil error:nil];
+//    [self.coreDataManager deleteData:@"Student" predicate:nil error:nil];
+    NSArray<Student *> *arr = [self.coreDataManager readData:@"Student" predicate:[NSPredicate predicateWithFormat:@"name == fnd"] error:nil];
     
-    NSLog(@"%@",[self.coreDataManager readData:@"Student" predicate:nil error:nil]);
+    [arr enumerateObjectsUsingBlock:^(Student * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"%@",obj.name);
+    }];
+    
 }
 
 
