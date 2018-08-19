@@ -1,5 +1,5 @@
 //
-//  CoreDataManager.h
+//  LYCoreDataManager.h
 //  LanOuPlan
 //
 //  Created by zzc-13 on 2018/8/6.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CoreDataManager : NSObject
+@interface LYCoreDataManager : NSObject
 
 /**
  根据source创建一个工具类

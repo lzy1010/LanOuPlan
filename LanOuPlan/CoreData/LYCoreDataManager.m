@@ -1,15 +1,15 @@
 //
-//  CoreDataManager.m
+//  LYCoreDataManager.m
 //  LanOuPlan
 //
 //  Created by zzc-13 on 2018/8/6.
 //  Copyright © 2018年 lzy. All rights reserved.
 //
 
-#import "CoreDataManager.h"
+#import "LYCoreDataManager.h"
 #import <CoreData/CoreData.h>
 
-@interface CoreDataManager ()
+@interface LYCoreDataManager ()
 
 @property (nonatomic, readwrite, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, readwrite, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation CoreDataManager
+@implementation LYCoreDataManager
 
 - (BOOL)createSqlite:(NSString *)source error:(void (^)(NSString *))errorBlock{
     self.managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:source withExtension:@"momd"]];
@@ -125,15 +125,16 @@
     NSFetchRequest *deleRequest = [NSFetchRequest fetchRequestWithEntityName:name];
     deleRequest.predicate = pre;
     
-    NSArray *dataArr = [self.context executeFetchRequest:deleRequest error:nil];
-    
+    NSError *error;
+    NSArray *dataArr = [self.context executeFetchRequest:deleRequest error:&error];
+        
     return dataArr;
 }
 
 
 
 // 用来获取 document 目录
-- (nullable NSURL *)documentDirectoryURL {
+- (nullable NSURL *)documentDirectoryURL {    
     return [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
 }
 
