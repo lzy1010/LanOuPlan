@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		360A3C9D21183285007AE20C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 360A3C9B21183284007AE20C /* Model.xcdatamodeld */; };
-		360A3CAA211847E4007AE20C /* LYCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A3CA9211847E4007AE20C /* LYCoreDataManager.m */; };
 		36290556211051B000FACBCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290555211051B000FACBCD /* AppDelegate.m */; };
 		36290559211051B000FACBCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290558211051B000FACBCD /* ViewController.m */; };
 		3629055C211051B000FACBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3629055A211051B000FACBCD /* Main.storyboard */; };
@@ -19,7 +17,10 @@
 		36290579211051B200FACBCD /* LanOuPlanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290578211051B200FACBCD /* LanOuPlanUITests.m */; };
 		366750E92129990B00FDF116 /* APPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 366750E82129990B00FDF116 /* APPFileManager.m */; };
 		366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 366750EB2129AA3E00FDF116 /* UIDevice+User.m */; };
-		366750EF2129ADEC00FDF116 /* LOCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 366750EE2129ADEC00FDF116 /* LOCoreDataManager.m */; };
+		4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39044212ADB9200F1629F /* LOCoreDataManager.m */; };
+		4AA39050212ADB9200F1629F /* LYCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39046212ADB9200F1629F /* LYCoreDataManager.m */; };
+		4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39048212ADB9200F1629F /* Model.xcdatamodeld */; };
+		4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA3904B212ADB9200F1629F /* BaseViewController.m */; };
 		4F7E0BE74871A6A28D38C64B /* Pods_LanOuPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +43,6 @@
 
 /* Begin PBXFileReference section */
 		0A8545ACA5587433F661C9FC /* Pods-LanOuPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanOuPlan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan.debug.xcconfig"; sourceTree = "<group>"; };
-		360A3C9C21183284007AE20C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		360A3CA8211847E4007AE20C /* LYCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCoreDataManager.h; sourceTree = "<group>"; };
-		360A3CA9211847E4007AE20C /* LYCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYCoreDataManager.m; sourceTree = "<group>"; };
 		36290551211051B000FACBCD /* LanOuPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanOuPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36290554211051B000FACBCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36290555211051B000FACBCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,8 +63,13 @@
 		366750E82129990B00FDF116 /* APPFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPFileManager.m; sourceTree = "<group>"; };
 		366750EA2129AA3E00FDF116 /* UIDevice+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+User.h"; sourceTree = "<group>"; };
 		366750EB2129AA3E00FDF116 /* UIDevice+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+User.m"; sourceTree = "<group>"; };
-		366750ED2129ADEC00FDF116 /* LOCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOCoreDataManager.h; sourceTree = "<group>"; };
-		366750EE2129ADEC00FDF116 /* LOCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOCoreDataManager.m; sourceTree = "<group>"; };
+		4AA39044212ADB9200F1629F /* LOCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOCoreDataManager.m; sourceTree = "<group>"; };
+		4AA39045212ADB9200F1629F /* LYCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoreDataManager.h; sourceTree = "<group>"; };
+		4AA39046212ADB9200F1629F /* LYCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoreDataManager.m; sourceTree = "<group>"; };
+		4AA39047212ADB9200F1629F /* LOCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOCoreDataManager.h; sourceTree = "<group>"; };
+		4AA39049212ADB9200F1629F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4AA3904B212ADB9200F1629F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4AA3904C212ADB9200F1629F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanOuPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A316072EF943A8929E797AA8 /* Pods-LanOuPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanOuPlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,18 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		360A3C9A21183284007AE20C /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				360A3C9B21183284007AE20C /* Model.xcdatamodeld */,
-				360A3CA8211847E4007AE20C /* LYCoreDataManager.h */,
-				360A3CA9211847E4007AE20C /* LYCoreDataManager.m */,
-				366750ED2129ADEC00FDF116 /* LOCoreDataManager.h */,
-				366750EE2129ADEC00FDF116 /* LOCoreDataManager.m */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		36290548211051B000FACBCD = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +125,8 @@
 		36290553211051B000FACBCD /* LanOuPlan */ = {
 			isa = PBXGroup;
 			children = (
+				4AA39041212ADB9200F1629F /* CodeClass */,
 				366750E6212998B200FDF116 /* APPDefine */,
-				360A3C9A21183284007AE20C /* CoreData */,
 				36290554211051B000FACBCD /* AppDelegate.h */,
 				36290555211051B000FACBCD /* AppDelegate.m */,
 				36290557211051B000FACBCD /* ViewController.h */,
@@ -176,6 +167,60 @@
 				366750EB2129AA3E00FDF116 /* UIDevice+User.m */,
 			);
 			path = APPDefine;
+			sourceTree = "<group>";
+		};
+		4AA39041212ADB9200F1629F /* CodeClass */ = {
+			isa = PBXGroup;
+			children = (
+				4AA39042212ADB9200F1629F /* Utiles */,
+				4AA3904A212ADB9200F1629F /* BaseClass */,
+				4AA3904D212ADB9200F1629F /* Commands */,
+				4AA3904E212ADB9200F1629F /* Modules */,
+			);
+			path = CodeClass;
+			sourceTree = "<group>";
+		};
+		4AA39042212ADB9200F1629F /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				4AA39043212ADB9200F1629F /* CoreData */,
+			);
+			path = Utiles;
+			sourceTree = "<group>";
+		};
+		4AA39043212ADB9200F1629F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4AA39044212ADB9200F1629F /* LOCoreDataManager.m */,
+				4AA39045212ADB9200F1629F /* LYCoreDataManager.h */,
+				4AA39046212ADB9200F1629F /* LYCoreDataManager.m */,
+				4AA39047212ADB9200F1629F /* LOCoreDataManager.h */,
+				4AA39048212ADB9200F1629F /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4AA3904A212ADB9200F1629F /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				4AA3904B212ADB9200F1629F /* BaseViewController.m */,
+				4AA3904C212ADB9200F1629F /* BaseViewController.h */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		4AA3904D212ADB9200F1629F /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		4AA3904E212ADB9200F1629F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		D66805D28A8E006E33A0C1AA /* Pods */ = {
@@ -349,10 +394,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/REFormattedNumberField/REFormattedNumberField.framework",
+				"${BUILT_PRODUCTS_DIR}/RETableViewManager/RETableViewManager.framework",
+				"${BUILT_PRODUCTS_DIR}/REValidation/REValidation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/REFormattedNumberField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RETableViewManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/REValidation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,14 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA39050212ADB9200F1629F /* LYCoreDataManager.m in Sources */,
+				4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */,
 				36290559211051B000FACBCD /* ViewController.m in Sources */,
+				4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */,
+				4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */,
 				36290564211051B200FACBCD /* main.m in Sources */,
-				360A3CAA211847E4007AE20C /* LYCoreDataManager.m in Sources */,
 				36290556211051B000FACBCD /* AppDelegate.m in Sources */,
 				366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */,
-				360A3C9D21183285007AE20C /* Model.xcdatamodeld in Sources */,
 				366750E92129990B00FDF116 /* APPFileManager.m in Sources */,
-				366750EF2129ADEC00FDF116 /* LOCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,12 +744,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		360A3C9B21183284007AE20C /* Model.xcdatamodeld */ = {
+		4AA39048212ADB9200F1629F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				360A3C9C21183284007AE20C /* Model.xcdatamodel */,
+				4AA39049212ADB9200F1629F /* Model.xcdatamodel */,
 			);
-			currentVersion = 360A3C9C21183284007AE20C /* Model.xcdatamodel */;
+			currentVersion = 4AA39049212ADB9200F1629F /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

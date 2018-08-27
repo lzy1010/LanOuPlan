@@ -1,16 +1,28 @@
 PODS:
   - Masonry (1.1.0)
+  - REFormattedNumberField (1.1.6)
+  - RETableViewManager (1.7):
+    - REFormattedNumberField (~> 1.1.5)
+    - REValidation (~> 0.1.4)
+  - REValidation (0.1.4)
 
 DEPENDENCIES:
   - Masonry (~> 1.1.0)
+  - RETableViewManager (~> 1.7)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Masonry
+    - REFormattedNumberField
+    - RETableViewManager
+    - REValidation
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
+  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
 
-PODFILE CHECKSUM: 2c405214b91f5a8ae0642faf22258020700c52ed
+PODFILE CHECKSUM: a9865b1b25efd0ef7e985120cf5627870e89c9cb
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

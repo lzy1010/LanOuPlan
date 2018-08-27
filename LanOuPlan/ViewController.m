@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-//#import "CoreDataManager.h"
+#import "LOCoreDataManager.h"
 #import <Masonry/Masonry.h>
 #import "UserInfo+CoreDataClass.h"
 
 @interface ViewController ()
 
-//@property (strong, nonatomic) CoreDataManager *coreDataManager;
+@property (strong, nonatomic) LOCoreDataManager *coreDataManager;
 
 @property (strong, nonatomic) UIButton *testBtn;
 
@@ -25,12 +25,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    self.coreDataManager = ({
-//        CoreDataManager *manager = [[CoreDataManager alloc] init];
-//        [manager createSqlite:@"Model" error:nil];
-//        
-//        manager;
-//    });
+    self.coreDataManager = ({
+        LOCoreDataManager *manager = [[LOCoreDataManager alloc] init];
+        [manager createSqlite:@"Model" error:nil];
+        
+        manager;
+    });
     
     self.testBtn = ({
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -60,7 +60,7 @@
 //        NSLog(@"%@",error);
 //    }];
 //
-////    [self.coreDataManager deleteData:@"Student" predicate:nil error:nil];
+//    [self.coreDataManager deleteData:@"Student" predicate:nil error:nil];
 //    NSArray<Student *> *arr = [self.coreDataManager readData:@"Student" predicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"name = 'lzy'"]] error:nil];
 //
 //    [arr enumerateObjectsUsingBlock:^(Student * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

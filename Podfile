@@ -6,5 +6,6 @@ target 'LanOuPlan' do
     use_frameworks!
 
     pod 'Masonry', '~> 1.1.0'
+    pod 'RETableViewManager', '~> 1.7'
     
 end
