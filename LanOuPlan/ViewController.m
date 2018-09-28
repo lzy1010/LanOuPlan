@@ -47,9 +47,32 @@
         make.width.height.mas_equalTo(100);
      }];
     
+    //失去了前台的监听
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
+    
+    
+    
 }
 
+- (void)applicationWillResignActive{
+    
+}
+
+
+
+
 - (void)addStudent{
+    NSURL *url = [NSURL URLWithString:@"Prefs:root=WIFI"];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication]openURL:url];
+        }
+    }
 //    [self.coreDataManager addData:@"Student" model:^(NSObject *model) {
 //        if ([model isKindOfClass:[Student class]]) {
 //            Student *lzy = (Student *)model;
