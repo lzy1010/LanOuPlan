@@ -10,4 +10,27 @@
 
 @interface BaseViewController : UIViewController
 
+
+
+/**
+ 子类设置导航条
+ */
+- (void)setUpNavigationbar;
+
+/**
+ 子类设置基本UI
+ */
+- (void)setUpUI;
+
+
+/**
+ 子类设置数据
+ */
+- (void)setUpData;
+
+
+
+
+
+
 @end

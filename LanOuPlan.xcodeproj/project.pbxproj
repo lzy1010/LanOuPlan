@@ -22,6 +22,7 @@
 		4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39048212ADB9200F1629F /* Model.xcdatamodeld */; };
 		4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA3904B212ADB9200F1629F /* BaseViewController.m */; };
 		4F7E0BE74871A6A28D38C64B /* Pods_LanOuPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */; };
+		780E9BB8215F80F200457D87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 780E9BB7215F80F100457D87 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		4AA3904C212ADB9200F1629F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		780C276121521D9B00D2F7D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		780C27722152209800D2F7D8 /* LanOuPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LanOuPlan.entitlements; sourceTree = "<group>"; };
+		780E9BB7215F80F100457D87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanOuPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A316072EF943A8929E797AA8 /* Pods-LanOuPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanOuPlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 		366750E6212998B200FDF116 /* APPDefine */ = {
 			isa = PBXGroup;
 			children = (
+				780E9BB7215F80F100457D87 /* README.md */,
 				366750E72129990B00FDF116 /* APPFileManager.h */,
 				366750E82129990B00FDF116 /* APPFileManager.m */,
 				366750EA2129AA3E00FDF116 /* UIDevice+User.h */,
@@ -370,6 +373,7 @@
 			files = (
 				36290561211051B200FACBCD /* LaunchScreen.storyboard in Resources */,
 				3629055E211051B200FACBCD /* Assets.xcassets in Resources */,
+				780E9BB8215F80F200457D87 /* README.md in Resources */,
 				3629055C211051B000FACBCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
