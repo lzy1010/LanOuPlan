@@ -22,30 +22,29 @@
     return YES;
 }
 
-//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
-//    NSString *prefix = @"iOSWidgetApp";
-//    NSLog(@"%@%@%@",app,url,options);
-//    if ([[url absoluteString] rangeOfString:prefix].location != NSNotFound) {
-//        NSString *action = [[url absoluteString] substringFromIndex:prefix.length];
-//        if ([action isEqualToString:@"GotoHomePage"]) {
-//            NSLog(@"gohome");
-//        }
-//        
-//        if ([action isEqualToString:@"GoBack"]) {
-//            NSLog(@"GoBack");
-//            return NO;
-//        }
-//        
-//        
-//    }
-//    return YES;
-//}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    
-      NSLog(@"%@%@%@%@",application,url,sourceApplication,annotation);
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    //后续交互需要开发者账户
+    NSString *prefix = @"iOSWidgetApp";
+    NSLog(@"%@%@%@",app,url,options);
+    if ([[url absoluteString] rangeOfString:prefix].location != NSNotFound) {
+        NSString *action = [[url absoluteString] substringFromIndex:prefix.length];
+        if ([action isEqualToString:@"GotoHomePage"]) {
+            NSLog(@"gohome");
+        }
+        
+        if ([action isEqualToString:@"GoBack"]) {
+            NSLog(@"GoBack");
+            return NO;
+        }
+        
+        
+    }
     return YES;
 }
+
+
+
+
 
 
 

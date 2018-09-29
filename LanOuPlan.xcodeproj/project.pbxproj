@@ -22,9 +22,6 @@
 		4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39048212ADB9200F1629F /* Model.xcdatamodeld */; };
 		4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA3904B212ADB9200F1629F /* BaseViewController.m */; };
 		4F7E0BE74871A6A28D38C64B /* Pods_LanOuPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */; };
-		780C276221521D9B00D2F7D8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780C276121521D9B00D2F7D8 /* NotificationCenter.framework */; };
-		780C276621521D9B00D2F7D8 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780C276521521D9B00D2F7D8 /* TodayViewController.m */; };
-		780C276D21521D9B00D2F7D8 /* todayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 780C276021521D9B00D2F7D8 /* todayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +39,6 @@
 			remoteGlobalIDString = 36290550211051B000FACBCD;
 			remoteInfo = LanOuPlan;
 		};
-		780C276B21521D9B00D2F7D8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 36290549211051B000FACBCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 780C275F21521D9B00D2F7D8;
-			remoteInfo = todayExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				780C276D21521D9B00D2F7D8 /* todayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,13 +83,8 @@
 		4AA39049212ADB9200F1629F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4AA3904B212ADB9200F1629F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4AA3904C212ADB9200F1629F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		780C276021521D9B00D2F7D8 /* todayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = todayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		780C276121521D9B00D2F7D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		780C276421521D9B00D2F7D8 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		780C276521521D9B00D2F7D8 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		780C276A21521D9B00D2F7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		780C27722152209800D2F7D8 /* LanOuPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LanOuPlan.entitlements; sourceTree = "<group>"; };
-		780C2773215220B700D2F7D8 /* todayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todayExtension.entitlements; sourceTree = "<group>"; };
 		966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanOuPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A316072EF943A8929E797AA8 /* Pods-LanOuPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanOuPlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,14 +112,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		780C275D21521D9B00D2F7D8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				780C276221521D9B00D2F7D8 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,7 +121,6 @@
 				36290553211051B000FACBCD /* LanOuPlan */,
 				3629056C211051B200FACBCD /* LanOuPlanTests */,
 				36290577211051B200FACBCD /* LanOuPlanUITests */,
-				780C276321521D9B00D2F7D8 /* todayExtension */,
 				36290552211051B000FACBCD /* Products */,
 				D66805D28A8E006E33A0C1AA /* Pods */,
 				E984A0A7A7BBA4606B738797 /* Frameworks */,
@@ -158,7 +133,6 @@
 				36290551211051B000FACBCD /* LanOuPlan.app */,
 				36290569211051B200FACBCD /* LanOuPlanTests.xctest */,
 				36290574211051B200FACBCD /* LanOuPlanUITests.xctest */,
-				780C276021521D9B00D2F7D8 /* todayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,17 +239,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		780C276321521D9B00D2F7D8 /* todayExtension */ = {
-			isa = PBXGroup;
-			children = (
-				780C2773215220B700D2F7D8 /* todayExtension.entitlements */,
-				780C276421521D9B00D2F7D8 /* TodayViewController.h */,
-				780C276521521D9B00D2F7D8 /* TodayViewController.m */,
-				780C276A21521D9B00D2F7D8 /* Info.plist */,
-			);
-			path = todayExtension;
-			sourceTree = "<group>";
-		};
 		D66805D28A8E006E33A0C1AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,7 +274,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				780C276C21521D9B00D2F7D8 /* PBXTargetDependency */,
 			);
 			name = LanOuPlan;
 			productName = LanOuPlan;
@@ -354,23 +316,6 @@
 			productReference = 36290574211051B200FACBCD /* LanOuPlanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		780C275F21521D9B00D2F7D8 /* todayExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 780C277021521D9B00D2F7D8 /* Build configuration list for PBXNativeTarget "todayExtension" */;
-			buildPhases = (
-				780C275C21521D9B00D2F7D8 /* Sources */,
-				780C275D21521D9B00D2F7D8 /* Frameworks */,
-				780C275E21521D9B00D2F7D8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = todayExtension;
-			productName = todayExtension;
-			productReference = 780C276021521D9B00D2F7D8 /* todayExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,7 +329,7 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -395,14 +340,6 @@
 					36290573211051B200FACBCD = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 36290550211051B000FACBCD;
-					};
-					780C275F21521D9B00D2F7D8 = {
-						CreatedOnToolsVersion = 9.4;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
 					};
 				};
 			};
@@ -422,7 +359,6 @@
 				36290550211051B000FACBCD /* LanOuPlan */,
 				36290568211051B200FACBCD /* LanOuPlanTests */,
 				36290573211051B200FACBCD /* LanOuPlanUITests */,
-				780C275F21521D9B00D2F7D8 /* todayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -446,13 +382,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		36290572211051B200FACBCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		780C275E21521D9B00D2F7D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -539,14 +468,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		780C275C21521D9B00D2F7D8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				780C276621521D9B00D2F7D8 /* TodayViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -559,11 +480,6 @@
 			isa = PBXTargetDependency;
 			target = 36290550211051B000FACBCD /* LanOuPlan */;
 			targetProxy = 36290575211051B200FACBCD /* PBXContainerItemProxy */;
-		};
-		780C276C21521D9B00D2F7D8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 780C275F21521D9B00D2F7D8 /* todayExtension */;
-			targetProxy = 780C276B21521D9B00D2F7D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -690,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -702,9 +618,9 @@
 			baseConfigurationReference = 0A8545ACA5587433F661C9FC /* Pods-LanOuPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LanOuPlan/LanOuPlan.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGVM9FG9AT;
 				INFOPLIST_FILE = LanOuPlan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,9 +639,9 @@
 			baseConfigurationReference = A316072EF943A8929E797AA8 /* Pods-LanOuPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LanOuPlan/LanOuPlan.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGVM9FG9AT;
 				INFOPLIST_FILE = LanOuPlan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -813,46 +729,6 @@
 			};
 			name = Release;
 		};
-		780C276E21521D9B00D2F7D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = todayExtension/todayExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = todayExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.LanOuPlan.todayExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		780C276F21521D9B00D2F7D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = todayExtension/todayExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = todayExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zuzuche.LanOuPlan.todayExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -888,15 +764,6 @@
 			buildConfigurations = (
 				36290584211051B200FACBCD /* Debug */,
 				36290585211051B200FACBCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		780C277021521D9B00D2F7D8 /* Build configuration list for PBXNativeTarget "todayExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				780C276E21521D9B00D2F7D8 /* Debug */,
-				780C276F21521D9B00D2F7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
