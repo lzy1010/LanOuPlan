@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "LOCoreDataManager.h"
-#import <Masonry/Masonry.h>
+
 #import "UserInfo+CoreDataClass.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "CalendarViewController.h"
+#import "NoteViewController.h"
+
 
 @interface ViewController ()
 
@@ -18,7 +21,12 @@
 
 @property (strong, nonatomic) UIButton *testBtn;
 
+@property(strong,nonatomic)CalendarViewController *calendarVC;
+
+
+
 @end
+
 
 @implementation ViewController
 
@@ -26,7 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSwipeGestureRecognizer];
 }
 
 - (void)setUpUI{
@@ -41,6 +50,9 @@
         }];
         btn;
     });
+    
+   
+   
     
 }
 
@@ -59,7 +71,53 @@
 - (void)applicationWillResignActive{
     
 }
-#pragma mark - Private Methods
+#pragma markO - Private Methods
+
+
+- (void)addSwipeGestureRecognizer{
+  UISwipeGestureRecognizer  *recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+    [self.view addGestureRecognizer:recognizer];
+    
+ 
+}
+
+
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+        NSLog(@"swipe O");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+        NSLog(@"swipe up");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        CalendarViewController * canlendarVC = [CalendarViewController new];
+        [self.navigationController pushViewController:canlendarVC animated:YES];
+        NSLog(@"swipe left");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        NSLog(@"swipe right");
+        NoteViewController *noteVC = [NoteViewController new];
+        [self.navigationController pushViewController:noteVC animated:YES];
+    }
+    
+    
+    
+}
+
+
 
 - (void)addStudent{
     //    NSURL*url=[NSURL URLWithString:@"Prefs:root=General"];

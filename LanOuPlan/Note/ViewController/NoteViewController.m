@@ -7,6 +7,7 @@
 //
 
 #import "NoteViewController.h"
+#import "NavigationAnimation.h"
 
 @interface NoteViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
+    self.animation.NavianimationType = NavigationRight;
 }
 
 /*
@@ -28,5 +31,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+
 
 @end

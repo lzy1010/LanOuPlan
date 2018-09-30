@@ -10,6 +10,8 @@
 
 @interface HomeViewController ()
 
+@property(nonatomic,strong)UIScrollView *scrollView;
+
 @end
 
 @implementation HomeViewController
@@ -19,14 +21,20 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)setUpUI{
+    self.scrollView =   ({
+        UIScrollView *name = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+        [name setContentSize:CGSizeMake(3 * kScreenW, 3 * kScreenH)];
+        [name setContentOffset:CGPointMake(kScreenW, kScreenH)];
+        name.pagingEnabled = YES;
+        name.backgroundColor = [UIColor redColor];
+        [self.view addSubview:name];
+        name;
+    });
+    
+    
+    
 }
-*/
+
 
 @end

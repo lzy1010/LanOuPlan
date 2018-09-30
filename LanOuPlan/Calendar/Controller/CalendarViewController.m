@@ -7,26 +7,42 @@
 //
 
 #import "CalendarViewController.h"
+#import "NavigationAnimation.h"
 
 @interface CalendarViewController ()
 
 @end
 
 @implementation CalendarViewController
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor cyanColor];
+      self.animation.NavianimationType = NavigationLeft;
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setUpUI{
+    
 }
-*/
+
+- (void)setUpData{
+    
+}
+
+#pragma mark - Event
+#pragma mark - Private Methods
+
+#pragma mark - Delegate
+#pragma mark - Custom Delegate
+#pragma mark - Getters and Setters
+
+
+
+
+
+
+
 
 @end

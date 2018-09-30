@@ -8,7 +8,11 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
+#import "NoteViewController.h"
+#import "CalendarViewController.h"
+
+
+@interface BaseViewController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -25,10 +29,13 @@
 #pragma mark - 父类的数据
 
 - (void)superConfig{
-    
+   
 }
 
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.navigationController.delegate = self;
+}
 
 #pragma mark 子类的数据
 - (void)setUpNavigationbar{
@@ -42,6 +49,39 @@
 - (void)setUpData{
     
 }
+
+-(NavigationAnimation *)animation{
+    if (!_animation) {
+        _animation = [NavigationAnimation new];
+    }
+    return _animation;
+}
+
+
+#pragma mark 自定义转场动画
+
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+ 
+        
+    
+    
+    self.animation.operation = operation;
+  
+
+
+    return self.animation;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @end
