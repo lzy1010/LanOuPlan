@@ -14,14 +14,21 @@
 @end
 
 @implementation CalendarViewController
+
 #pragma mark - Life Cycle
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor cyanColor];
-      self.animation.NavianimationType = NavigationLeft;
-    
+       self.animationType = NavigationLeft;
+    self.title = @"我是日历";
 }
+
+
+
+
 
 - (void)setUpUI{
     
@@ -33,6 +40,7 @@
 
 #pragma mark - Event
 #pragma mark - Private Methods
+
 
 #pragma mark - Delegate
 #pragma mark - Custom Delegate

@@ -13,6 +13,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "CalendarViewController.h"
 #import "NoteViewController.h"
+#import "NavigationAnimation.h"
 
 
 @interface ViewController ()
@@ -103,14 +104,17 @@
         NSLog(@"swipe up");
     }
     if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        CalendarViewController * canlendarVC = [CalendarViewController new];
-        [self.navigationController pushViewController:canlendarVC animated:YES];
+        NoteViewController *noteVC = [NoteViewController new];
+        noteVC.animationType = NavigationRight;
+        [self.navigationController pushViewController:noteVC animated:YES];
         NSLog(@"swipe left");
     }
     if(recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        CalendarViewController * canlendarVC = [CalendarViewController new];
+        canlendarVC.animationType = NavigationLeft;
+        [self.navigationController pushViewController:canlendarVC animated:YES];
         NSLog(@"swipe right");
-        NoteViewController *noteVC = [NoteViewController new];
-        [self.navigationController pushViewController:noteVC animated:YES];
+       
     }
     
     

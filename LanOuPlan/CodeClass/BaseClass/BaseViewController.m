@@ -52,7 +52,7 @@
 
 -(NavigationAnimation *)animation{
     if (!_animation) {
-        _animation = [NavigationAnimation new];
+      _animation = [NavigationAnimation new];
     }
     return _animation;
 }
@@ -63,11 +63,26 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
  
-        
     
-    
+    //默认右边
     self.animation.operation = operation;
-  
+    
+    
+    if (operation == UINavigationControllerOperationPush) {
+        if ([toVC isKindOfClass: [CalendarViewController class]]) {
+            self.animation.NavianimationType = NavigationLeft;
+        }
+        if ([toVC isKindOfClass:[NoteViewController class]]) {
+            self.animation.NavianimationType = NavigationRight;
+        }
+    }else if (operation == UINavigationControllerOperationPop) {
+        if ([fromVC isKindOfClass: [CalendarViewController class]]) {
+            self.animation.NavianimationType = NavigationRight;
+        }
+        if ([fromVC isKindOfClass:[NoteViewController class]]) {
+            self.animation.NavianimationType = NavigationLeft;
+        }
+    }
 
 
     return self.animation;

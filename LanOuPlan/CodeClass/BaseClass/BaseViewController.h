@@ -12,8 +12,8 @@
 @interface BaseViewController : UIViewController
 
 @property(assign,nonatomic)NavigationAnimationType animationType;
-
 @property(strong,nonatomic)NavigationAnimation *animation;
+
 
 
 //-(NavigationAnimation*)getAnimation;

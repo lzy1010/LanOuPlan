@@ -22,6 +22,7 @@
 // 定义转场动画的行为
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     NSLog(@"自定义转场");
+    NSLog(@"%ld",self.NavianimationType);
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     //to
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -40,32 +41,25 @@
     //这个非常重要，将toView加入到containerView中
     [[transitionContext containerView]  addSubview:toView];
     
-    if ([self isEqual:[NavigationAnimation class]]) {
-        switch (self.NavianimationType) {
-            case NavigationRight:
-                [self animationWithRight:transitionContext FromView:fromView toView:toView];
-                break;
-            case NavigationLeft:
-                [self animationWithLeft:transitionContext FromView:fromView toView:toView];
-                break;
-                
-            default:
-                break;
-        }
-    }else{
-        [self customAnimation:transitionContext FromView:fromView toView:toView];
-    }
-   
-    
-   
-    
-    
+//        if (self.operation == UINavigationControllerOperationPush) {
+            switch (self.NavianimationType) {
+                case NavigationRight:
+                    [self animationWithRight:transitionContext FromView:fromView toView:toView];
+                    break;
+                case NavigationLeft:
+                    [self animationWithLeft:transitionContext FromView:fromView toView:toView];
+                    break;
+                    
+                default:
+                    break;
+            }
+//    }    
 }
 
 //自定义动画
 - (void)customAnimation:(id <UIViewControllerContextTransitioning>)transitionContext FromView:(UIView *)fromView toView:(UIView *)toView{
     
-    
+    NSLog(@"自定义动画");
     
     
 }
