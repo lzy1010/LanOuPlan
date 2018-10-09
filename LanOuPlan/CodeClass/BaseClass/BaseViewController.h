@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigationAnimation.h"
 
 @interface BaseViewController : UIViewController
 
+@property(assign,nonatomic)NavigationAnimationType animationType;
+@property(strong,nonatomic)NavigationAnimation *animation;
 
+
+
+//-(NavigationAnimation*)getAnimation;
 
 /**
  子类设置导航条

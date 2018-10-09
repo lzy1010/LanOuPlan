@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		36290556211051B000FACBCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290555211051B000FACBCD /* AppDelegate.m */; };
 		36290559211051B000FACBCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290558211051B000FACBCD /* ViewController.m */; };
-		3629055C211051B000FACBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3629055A211051B000FACBCD /* Main.storyboard */; };
 		3629055E211051B200FACBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3629055D211051B200FACBCD /* Assets.xcassets */; };
 		36290561211051B200FACBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3629055F211051B200FACBCD /* LaunchScreen.storyboard */; };
 		36290564211051B200FACBCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290563211051B200FACBCD /* main.m */; };
@@ -25,6 +24,15 @@
 		4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA3904B212ADB9200F1629F /* BaseViewController.m */; };
 		4F7E0BE74871A6A28D38C64B /* Pods_LanOuPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */; };
 		780E9BB8215F80F200457D87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 780E9BB7215F80F100457D87 /* README.md */; };
+		784CBB8A21606595004371A4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784CBB8921606595004371A4 /* CalendarViewController.m */; };
+		784CBB8F21606DD7004371A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784CBB8E21606DD7004371A4 /* HomeViewController.m */; };
+		788451A8216C9BDC00D68551 /* trade.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 788451A1216C9BDC00D68551 /* trade.bundle */; };
+		788451A9216C9BDC00D68551 /* GalenPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A2216C9BDC00D68551 /* GalenPasswordView.m */; };
+		788451AA216C9BDC00D68551 /* GalneProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A3216C9BDC00D68551 /* GalneProgressView.m */; };
+		788451AB216C9BDC00D68551 /* GalenPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */; };
+		788451AE216C9D0F00D68551 /* GalenPasswordServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451AD216C9D0F00D68551 /* GalenPasswordServer.m */; };
+		7893AC7321607DE30079B397 /* NavigationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893AC7221607DE30079B397 /* NavigationAnimation.m */; };
+		7893AC7821609D610079B397 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893AC7721609D610079B397 /* NoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +72,6 @@
 		36290555211051B000FACBCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		36290557211051B000FACBCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		36290558211051B000FACBCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3629055B211051B000FACBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3629055D211051B200FACBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36290560211051B200FACBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36290562211051B200FACBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +100,24 @@
 		780C276121521D9B00D2F7D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		780C27722152209800D2F7D8 /* LanOuPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LanOuPlan.entitlements; sourceTree = "<group>"; };
 		780E9BB7215F80F100457D87 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		784CBB8821606595004371A4 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		784CBB8921606595004371A4 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		784CBB8D21606DD7004371A4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		784CBB8E21606DD7004371A4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		784CBB9021606EB4004371A4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		788451A1216C9BDC00D68551 /* trade.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = trade.bundle; sourceTree = "<group>"; };
+		788451A2216C9BDC00D68551 /* GalenPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPasswordView.m; sourceTree = "<group>"; };
+		788451A3216C9BDC00D68551 /* GalneProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalneProgressView.m; sourceTree = "<group>"; };
+		788451A4216C9BDC00D68551 /* GalenPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalenPayPasswordView.h; sourceTree = "<group>"; };
+		788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPayPasswordView.m; sourceTree = "<group>"; };
+		788451AC216C9D0F00D68551 /* GalenPasswordServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalenPasswordServer.h; sourceTree = "<group>"; };
+		788451AD216C9D0F00D68551 /* GalenPasswordServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalenPasswordServer.m; sourceTree = "<group>"; };
+		788451AF216CA12200D68551 /* GalenPasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalenPasswordView.h; sourceTree = "<group>"; };
+		788451B1216CA12B00D68551 /* GalneProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalneProgressView.h; sourceTree = "<group>"; };
+		7893AC7121607DE30079B397 /* NavigationAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationAnimation.h; sourceTree = "<group>"; };
+		7893AC7221607DE30079B397 /* NavigationAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationAnimation.m; sourceTree = "<group>"; };
+		7893AC7621609D610079B397 /* NoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		7893AC7721609D610079B397 /* NoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		966B6F1E4188BB3B5A9BA1FC /* Pods_LanOuPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanOuPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A316072EF943A8929E797AA8 /* Pods-LanOuPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanOuPlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanOuPlan/Pods-LanOuPlan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +173,9 @@
 		36290553211051B000FACBCD /* LanOuPlan */ = {
 			isa = PBXGroup;
 			children = (
+				7893AC7421609D2F0079B397 /* Note */,
+				784CBB8B21606D96004371A4 /* Home */,
+				784CBB8621606542004371A4 /* Calendar */,
 				780C27722152209800D2F7D8 /* LanOuPlan.entitlements */,
 				4AA39041212ADB9200F1629F /* CodeClass */,
 				366750E6212998B200FDF116 /* APPDefine */,
@@ -192,6 +220,7 @@
 				366750E82129990B00FDF116 /* APPFileManager.m */,
 				366750EA2129AA3E00FDF116 /* UIDevice+User.h */,
 				366750EB2129AA3E00FDF116 /* UIDevice+User.m */,
+				784CBB9021606EB4004371A4 /* PrefixHeader.pch */,
 			);
 			path = APPDefine;
 			sourceTree = "<group>";
@@ -208,6 +237,7 @@
 		4AA39041212ADB9200F1629F /* CodeClass */ = {
 			isa = PBXGroup;
 			children = (
+				788451A0216C9BDC00D68551 /* GalenPasswordView */,
 				4AA39042212ADB9200F1629F /* Utiles */,
 				4AA3904A212ADB9200F1629F /* BaseClass */,
 				369B0C17216A37180039C2D4 /* Modules */,
@@ -240,10 +270,94 @@
 			children = (
 				4AA3904C212ADB9200F1629F /* BaseViewController.h */,
 				4AA3904B212ADB9200F1629F /* BaseViewController.m */,
+				7893AC7121607DE30079B397 /* NavigationAnimation.h */,
+				7893AC7221607DE30079B397 /* NavigationAnimation.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
+		4AA3904D212ADB9200F1629F /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		4AA3904E212ADB9200F1629F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		784CBB8621606542004371A4 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				784CBB8721606551004371A4 /* Controller */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		784CBB8721606551004371A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				784CBB8821606595004371A4 /* CalendarViewController.h */,
+				784CBB8921606595004371A4 /* CalendarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		784CBB8B21606D96004371A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				784CBB8C21606DC5004371A4 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		784CBB8C21606DC5004371A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				784CBB8D21606DD7004371A4 /* HomeViewController.h */,
+				784CBB8E21606DD7004371A4 /* HomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		788451A0216C9BDC00D68551 /* GalenPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				788451AF216CA12200D68551 /* GalenPasswordView.h */,
+				788451A2216C9BDC00D68551 /* GalenPasswordView.m */,
+				788451B1216CA12B00D68551 /* GalneProgressView.h */,
+				788451A3216C9BDC00D68551 /* GalneProgressView.m */,
+				788451A4216C9BDC00D68551 /* GalenPayPasswordView.h */,
+				788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */,
+				788451AC216C9D0F00D68551 /* GalenPasswordServer.h */,
+				788451AD216C9D0F00D68551 /* GalenPasswordServer.m */,
+				788451A1216C9BDC00D68551 /* trade.bundle */,
+			);
+			path = GalenPasswordView;
+			sourceTree = "<group>";
+		};
+		7893AC7421609D2F0079B397 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				7893AC7521609D450079B397 /* ViewController */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		7893AC7521609D450079B397 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7893AC7621609D610079B397 /* NoteViewController.h */,
+				7893AC7721609D610079B397 /* NoteViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+>>>>>>> 18b7bf23247d9ddd97a0d2ac02d7a2bcac116548
 		D66805D28A8E006E33A0C1AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,10 +487,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788451A8216C9BDC00D68551 /* trade.bundle in Resources */,
 				36290561211051B200FACBCD /* LaunchScreen.storyboard in Resources */,
 				3629055E211051B200FACBCD /* Assets.xcassets in Resources */,
 				780E9BB8215F80F200457D87 /* README.md in Resources */,
-				3629055C211051B000FACBCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,16 +560,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788451AB216C9BDC00D68551 /* GalenPayPasswordView.m in Sources */,
+				7893AC7821609D610079B397 /* NoteViewController.m in Sources */,
 				4AA39050212ADB9200F1629F /* LYCoreDataManager.m in Sources */,
 				4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */,
+				788451AA216C9BDC00D68551 /* GalneProgressView.m in Sources */,
 				36290559211051B000FACBCD /* ViewController.m in Sources */,
+				788451AE216C9D0F00D68551 /* GalenPasswordServer.m in Sources */,
 				4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */,
+				7893AC7321607DE30079B397 /* NavigationAnimation.m in Sources */,
 				4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */,
 				369B0C12216A2B130039C2D4 /* NotePageViewController.m in Sources */,
 				36290564211051B200FACBCD /* main.m in Sources */,
 				369B0C1A216A37380039C2D4 /* LyActionViewController.m in Sources */,
+				784CBB8F21606DD7004371A4 /* HomeViewController.m in Sources */,
 				36290556211051B000FACBCD /* AppDelegate.m in Sources */,
 				366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */,
+				788451A9216C9BDC00D68551 /* GalenPasswordView.m in Sources */,
+				784CBB8A21606595004371A4 /* CalendarViewController.m in Sources */,
 				366750E92129990B00FDF116 /* APPFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,14 +614,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3629055A211051B000FACBCD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3629055B211051B000FACBCD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3629055F211051B200FACBCD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -552,6 +666,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LanOuPlan/APPDefine/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -608,6 +724,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LanOuPlan/APPDefine/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -8,10 +8,14 @@
 
 #import "ViewController.h"
 #import "LOCoreDataManager.h"
-#import <Masonry/Masonry.h>
+
 #import "UserInfo+CoreDataClass.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "NotePageViewController.h"
+#import "CalendarViewController.h"
+#import "NoteViewController.h"
+#import "NavigationAnimation.h"
+#import "GalenPayPasswordView.h"
 
 @interface ViewController ()
 
@@ -21,7 +25,10 @@
 
 @property (strong, nonatomic) UIButton *notePageBtn;
 
+@property(strong,nonatomic)CalendarViewController *calendarVC;
+
 @end
+
 
 @implementation ViewController
 
@@ -29,7 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSwipeGestureRecognizer];
 }
 
 - (void)setUpUI{
@@ -62,6 +70,7 @@
         make.left.top.mas_equalTo(200);
         make.width.height.mas_equalTo(100);
     }];
+
 }
 
 - (void)setUpData{
@@ -79,7 +88,56 @@
 - (void)applicationWillResignActive{
 
 }
-#pragma mark - Private Methods
+#pragma markO - Private Methods
+
+
+- (void)addSwipeGestureRecognizer{
+  UISwipeGestureRecognizer  *recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+    [self.view addGestureRecognizer:recognizer];
+    
+ 
+}
+
+
+- (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+        NSLog(@"swipe O");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+        NSLog(@"swipe up");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        NoteViewController *noteVC = [NoteViewController new];
+        noteVC.animationType = NavigationRight;
+        [self.navigationController pushViewController:noteVC animated:YES];
+        NSLog(@"swipe left");
+    }
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        CalendarViewController * canlendarVC = [CalendarViewController new];
+        canlendarVC.animationType = NavigationLeft;
+        [self.navigationController pushViewController:canlendarVC animated:YES];
+        NSLog(@"swipe right");
+       
+    }
+    
+    
+    
+}
+
+
 
 - (void)pushToNotePage{
     NotePageViewController *notePage = [[NotePageViewController alloc] init];
@@ -90,20 +148,39 @@
 }
 
 - (void)addStudent{
+    
     //    NSURL*url=[NSURL URLWithString:@"Prefs:root=General"];
     //    Class LSApplicationWorkspace = NSClassFromString(@"LSApplicationWorkspace");
     //    [[LSApplicationWorkspace performSelector:@selector(defaultWorkspace)] performSelector:@selector(openSensitiveURL:withOptions:) withObject:url withObject:nil];
     
-    NSURL *url = [NSURL URLWithString:@"Prefs:root=General&path=Keyboard"];
+    GalenPayPasswordView *pwdView = [GalenPayPasswordView tradeView];
+    pwdView.Server.api = @"朝阳大沙雕";
+    [pwdView showInView:[UIApplication sharedApplication].keyWindow];
     
-    // 系统大于10的时候直接打开当前App的设置界面
-    if (@available(iOS 10.0, *)) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
-    } else {
-        // Fallback on earlier versions
-        NSLog(@"打开失败");
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    __block typeof(GalenPayPasswordView *) blockPay = pwdView;
+    [pwdView setFinish:^(NSString *pwdString) {
+        
+        [blockPay hiddenPayPasswordView];
+    }];
+    
+    [pwdView setLessPassword:^{
+        [blockPay hiddenPayPasswordView];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+        });
+    }];
+    
+//    NSURL *url = [NSURL URLWithString:@"Prefs:root=General&path=Keyboard"];
+//
+//    // 系统大于10的时候直接打开当前App的设置界面
+//    if (@available(iOS 10.0, *)) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+//    } else {
+//        // Fallback on earlier versions
+//        NSLog(@"打开失败");
+//        [[UIApplication sharedApplication] openURL:url];
+//    }
     
     
     //    [self.coreDataManager addData:@"Student" model:^(NSObject *model) {
