@@ -8,7 +8,7 @@
 
 #import "NoteViewController.h"
 #import "NavigationAnimation.h"
-
+#import "GalenPayPasswordView.h"
 @interface NoteViewController ()
 
 @end
@@ -24,6 +24,25 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
     self.title = @"我是笔记本";
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    GalenPayPasswordView *pwdView = [GalenPayPasswordView tradeView];
+    pwdView.Server.api = @"楠英大沙雕";
+    [pwdView showInView:[UIApplication sharedApplication].keyWindow];
+    
+    __block typeof(GalenPayPasswordView *) blockPay = pwdView;
+    [pwdView setFinish:^(NSString *pwdString) {
+        
+        [blockPay hiddenPayPasswordView];
+    }];
+    
+    [pwdView setLessPassword:^{
+        [blockPay hiddenPayPasswordView];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+        });
+    }];
 }
 
 /*

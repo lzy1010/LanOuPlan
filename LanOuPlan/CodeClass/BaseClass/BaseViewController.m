@@ -50,12 +50,7 @@
     
 }
 
--(NavigationAnimation *)animation{
-    if (!_animation) {
-      _animation = [NavigationAnimation new];
-    }
-    return _animation;
-}
+
 
 
 #pragma mark 自定义转场动画
@@ -89,7 +84,12 @@
 }
 
 
-
+- (NavigationAnimation *)animation{
+    if (!_animation) {
+        _animation = [NavigationAnimation new];
+    }
+    return _animation;
+}
 
 
 

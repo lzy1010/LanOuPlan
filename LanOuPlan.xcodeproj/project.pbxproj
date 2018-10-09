@@ -24,6 +24,11 @@
 		780E9BB8215F80F200457D87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 780E9BB7215F80F100457D87 /* README.md */; };
 		784CBB8A21606595004371A4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784CBB8921606595004371A4 /* CalendarViewController.m */; };
 		784CBB8F21606DD7004371A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784CBB8E21606DD7004371A4 /* HomeViewController.m */; };
+		788451A8216C9BDC00D68551 /* trade.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 788451A1216C9BDC00D68551 /* trade.bundle */; };
+		788451A9216C9BDC00D68551 /* GalenPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A2216C9BDC00D68551 /* GalenPasswordView.m */; };
+		788451AA216C9BDC00D68551 /* GalneProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A3216C9BDC00D68551 /* GalneProgressView.m */; };
+		788451AB216C9BDC00D68551 /* GalenPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */; };
+		788451AE216C9D0F00D68551 /* GalenPasswordServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 788451AD216C9D0F00D68551 /* GalenPasswordServer.m */; };
 		7893AC7321607DE30079B397 /* NavigationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893AC7221607DE30079B397 /* NavigationAnimation.m */; };
 		7893AC7821609D610079B397 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893AC7721609D610079B397 /* NoteViewController.m */; };
 /* End PBXBuildFile section */
@@ -94,6 +99,15 @@
 		784CBB8D21606DD7004371A4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		784CBB8E21606DD7004371A4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		784CBB9021606EB4004371A4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		788451A1216C9BDC00D68551 /* trade.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = trade.bundle; sourceTree = "<group>"; };
+		788451A2216C9BDC00D68551 /* GalenPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPasswordView.m; sourceTree = "<group>"; };
+		788451A3216C9BDC00D68551 /* GalneProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalneProgressView.m; sourceTree = "<group>"; };
+		788451A4216C9BDC00D68551 /* GalenPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalenPayPasswordView.h; sourceTree = "<group>"; };
+		788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalenPayPasswordView.m; sourceTree = "<group>"; };
+		788451AC216C9D0F00D68551 /* GalenPasswordServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalenPasswordServer.h; sourceTree = "<group>"; };
+		788451AD216C9D0F00D68551 /* GalenPasswordServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalenPasswordServer.m; sourceTree = "<group>"; };
+		788451AF216CA12200D68551 /* GalenPasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalenPasswordView.h; sourceTree = "<group>"; };
+		788451B1216CA12B00D68551 /* GalneProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalneProgressView.h; sourceTree = "<group>"; };
 		7893AC7121607DE30079B397 /* NavigationAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationAnimation.h; sourceTree = "<group>"; };
 		7893AC7221607DE30079B397 /* NavigationAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationAnimation.m; sourceTree = "<group>"; };
 		7893AC7621609D610079B397 /* NoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
@@ -205,6 +219,7 @@
 		4AA39041212ADB9200F1629F /* CodeClass */ = {
 			isa = PBXGroup;
 			children = (
+				788451A0216C9BDC00D68551 /* GalenPasswordView */,
 				4AA39042212ADB9200F1629F /* Utiles */,
 				4AA3904A212ADB9200F1629F /* BaseClass */,
 				4AA3904D212ADB9200F1629F /* Commands */,
@@ -290,6 +305,22 @@
 				784CBB8E21606DD7004371A4 /* HomeViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		788451A0216C9BDC00D68551 /* GalenPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				788451AF216CA12200D68551 /* GalenPasswordView.h */,
+				788451A2216C9BDC00D68551 /* GalenPasswordView.m */,
+				788451B1216CA12B00D68551 /* GalneProgressView.h */,
+				788451A3216C9BDC00D68551 /* GalneProgressView.m */,
+				788451A4216C9BDC00D68551 /* GalenPayPasswordView.h */,
+				788451A7216C9BDC00D68551 /* GalenPayPasswordView.m */,
+				788451AC216C9D0F00D68551 /* GalenPasswordServer.h */,
+				788451AD216C9D0F00D68551 /* GalenPasswordServer.m */,
+				788451A1216C9BDC00D68551 /* trade.bundle */,
+			);
+			path = GalenPasswordView;
 			sourceTree = "<group>";
 		};
 		7893AC7421609D2F0079B397 /* Note */ = {
@@ -438,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788451A8216C9BDC00D68551 /* trade.bundle in Resources */,
 				36290561211051B200FACBCD /* LaunchScreen.storyboard in Resources */,
 				3629055E211051B200FACBCD /* Assets.xcassets in Resources */,
 				780E9BB8215F80F200457D87 /* README.md in Resources */,
@@ -510,10 +542,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788451AB216C9BDC00D68551 /* GalenPayPasswordView.m in Sources */,
 				7893AC7821609D610079B397 /* NoteViewController.m in Sources */,
 				4AA39050212ADB9200F1629F /* LYCoreDataManager.m in Sources */,
 				4AA39052212ADB9200F1629F /* BaseViewController.m in Sources */,
+				788451AA216C9BDC00D68551 /* GalneProgressView.m in Sources */,
 				36290559211051B000FACBCD /* ViewController.m in Sources */,
+				788451AE216C9D0F00D68551 /* GalenPasswordServer.m in Sources */,
 				4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */,
 				7893AC7321607DE30079B397 /* NavigationAnimation.m in Sources */,
 				4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */,
@@ -521,6 +556,7 @@
 				784CBB8F21606DD7004371A4 /* HomeViewController.m in Sources */,
 				36290556211051B000FACBCD /* AppDelegate.m in Sources */,
 				366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */,
+				788451A9216C9BDC00D68551 /* GalenPasswordView.m in Sources */,
 				784CBB8A21606595004371A4 /* CalendarViewController.m in Sources */,
 				366750E92129990B00FDF116 /* APPFileManager.m in Sources */,
 			);

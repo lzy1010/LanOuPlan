@@ -14,7 +14,7 @@
 #import "CalendarViewController.h"
 #import "NoteViewController.h"
 #import "NavigationAnimation.h"
-
+#import "GalenPayPasswordView.h"
 
 @interface ViewController ()
 
@@ -124,20 +124,39 @@
 
 
 - (void)addStudent{
+    
     //    NSURL*url=[NSURL URLWithString:@"Prefs:root=General"];
     //    Class LSApplicationWorkspace = NSClassFromString(@"LSApplicationWorkspace");
     //    [[LSApplicationWorkspace performSelector:@selector(defaultWorkspace)] performSelector:@selector(openSensitiveURL:withOptions:) withObject:url withObject:nil];
     
-    NSURL *url = [NSURL URLWithString:@"Prefs:root=General&path=Keyboard"];
+    GalenPayPasswordView *pwdView = [GalenPayPasswordView tradeView];
+    pwdView.Server.api = @"朝阳大沙雕";
+    [pwdView showInView:[UIApplication sharedApplication].keyWindow];
     
-    // 系统大于10的时候直接打开当前App的设置界面
-    if (@available(iOS 10.0, *)) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
-    } else {
-        // Fallback on earlier versions
-        NSLog(@"打开失败");
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    __block typeof(GalenPayPasswordView *) blockPay = pwdView;
+    [pwdView setFinish:^(NSString *pwdString) {
+        
+        [blockPay hiddenPayPasswordView];
+    }];
+    
+    [pwdView setLessPassword:^{
+        [blockPay hiddenPayPasswordView];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+        });
+    }];
+    
+//    NSURL *url = [NSURL URLWithString:@"Prefs:root=General&path=Keyboard"];
+//
+//    // 系统大于10的时候直接打开当前App的设置界面
+//    if (@available(iOS 10.0, *)) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+//    } else {
+//        // Fallback on earlier versions
+//        NSLog(@"打开失败");
+//        [[UIApplication sharedApplication] openURL:url];
+//    }
     
     
     //    [self.coreDataManager addData:@"Student" model:^(NSObject *model) {
