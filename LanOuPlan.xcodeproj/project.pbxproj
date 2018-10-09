@@ -357,7 +357,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
->>>>>>> 18b7bf23247d9ddd97a0d2ac02d7a2bcac116548
 		D66805D28A8E006E33A0C1AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
