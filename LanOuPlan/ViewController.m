@@ -11,12 +11,15 @@
 #import <Masonry/Masonry.h>
 #import "UserInfo+CoreDataClass.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "NotePageViewController.h"
 
 @interface ViewController ()
 
 @property (strong, nonatomic) LOCoreDataManager *coreDataManager;
 
 @property (strong, nonatomic) UIButton *testBtn;
+
+@property (strong, nonatomic) UIButton *notePageBtn;
 
 @end
 
@@ -42,6 +45,23 @@
         btn;
     });
     
+    self.notePageBtn = ({
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        [btn setBackgroundColor:[UIColor blueColor]];
+        [btn setTitle:@"待办页" forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(pushToNotePage) forControlEvents:UIControlEventTouchUpInside];
+
+        btn;
+    });
+    
+    [self.view addSubview:self.notePageBtn];
+    
+    [self.notePageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(200);
+        make.width.height.mas_equalTo(100);
+    }];
 }
 
 - (void)setUpData{
@@ -57,9 +77,17 @@
 }
 #pragma mark - Event
 - (void)applicationWillResignActive{
-    
+
 }
 #pragma mark - Private Methods
+
+- (void)pushToNotePage{
+    NotePageViewController *notePage = [[NotePageViewController alloc] init];
+    
+    if (self.navigationController) {
+        [self.navigationController pushViewController:notePage animated:true];
+    }
+}
 
 - (void)addStudent{
     //    NSURL*url=[NSURL URLWithString:@"Prefs:root=General"];

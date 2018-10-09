@@ -17,6 +17,8 @@
 		36290579211051B200FACBCD /* LanOuPlanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36290578211051B200FACBCD /* LanOuPlanUITests.m */; };
 		366750E92129990B00FDF116 /* APPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 366750E82129990B00FDF116 /* APPFileManager.m */; };
 		366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 366750EB2129AA3E00FDF116 /* UIDevice+User.m */; };
+		369B0C12216A2B130039C2D4 /* NotePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369B0C11216A2B130039C2D4 /* NotePageViewController.m */; };
+		369B0C1A216A37380039C2D4 /* LyActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369B0C19216A37380039C2D4 /* LyActionViewController.m */; };
 		4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39044212ADB9200F1629F /* LOCoreDataManager.m */; };
 		4AA39050212ADB9200F1629F /* LYCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39046212ADB9200F1629F /* LYCoreDataManager.m */; };
 		4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA39048212ADB9200F1629F /* Model.xcdatamodeld */; };
@@ -77,6 +79,10 @@
 		366750E82129990B00FDF116 /* APPFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPFileManager.m; sourceTree = "<group>"; };
 		366750EA2129AA3E00FDF116 /* UIDevice+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+User.h"; sourceTree = "<group>"; };
 		366750EB2129AA3E00FDF116 /* UIDevice+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+User.m"; sourceTree = "<group>"; };
+		369B0C10216A2B130039C2D4 /* NotePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotePageViewController.h; sourceTree = "<group>"; };
+		369B0C11216A2B130039C2D4 /* NotePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotePageViewController.m; sourceTree = "<group>"; };
+		369B0C18216A37380039C2D4 /* LyActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyActionViewController.h; sourceTree = "<group>"; };
+		369B0C19216A37380039C2D4 /* LyActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyActionViewController.m; sourceTree = "<group>"; };
 		4AA39044212ADB9200F1629F /* LOCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOCoreDataManager.m; sourceTree = "<group>"; };
 		4AA39045212ADB9200F1629F /* LYCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCoreDataManager.h; sourceTree = "<group>"; };
 		4AA39046212ADB9200F1629F /* LYCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCoreDataManager.m; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 				36290555211051B000FACBCD /* AppDelegate.m */,
 				36290557211051B000FACBCD /* ViewController.h */,
 				36290558211051B000FACBCD /* ViewController.m */,
+				369B0C10216A2B130039C2D4 /* NotePageViewController.h */,
+				369B0C11216A2B130039C2D4 /* NotePageViewController.m */,
 				3629055A211051B000FACBCD /* Main.storyboard */,
 				3629055D211051B200FACBCD /* Assets.xcassets */,
 				3629055F211051B200FACBCD /* LaunchScreen.storyboard */,
@@ -188,13 +196,21 @@
 			path = APPDefine;
 			sourceTree = "<group>";
 		};
+		369B0C17216A37180039C2D4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				369B0C18216A37380039C2D4 /* LyActionViewController.h */,
+				369B0C19216A37380039C2D4 /* LyActionViewController.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		4AA39041212ADB9200F1629F /* CodeClass */ = {
 			isa = PBXGroup;
 			children = (
 				4AA39042212ADB9200F1629F /* Utiles */,
 				4AA3904A212ADB9200F1629F /* BaseClass */,
-				4AA3904D212ADB9200F1629F /* Commands */,
-				4AA3904E212ADB9200F1629F /* Modules */,
+				369B0C17216A37180039C2D4 /* Modules */,
 			);
 			path = CodeClass;
 			sourceTree = "<group>";
@@ -210,10 +226,10 @@
 		4AA39043212ADB9200F1629F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4AA39047212ADB9200F1629F /* LOCoreDataManager.h */,
 				4AA39044212ADB9200F1629F /* LOCoreDataManager.m */,
 				4AA39045212ADB9200F1629F /* LYCoreDataManager.h */,
 				4AA39046212ADB9200F1629F /* LYCoreDataManager.m */,
-				4AA39047212ADB9200F1629F /* LOCoreDataManager.h */,
 				4AA39048212ADB9200F1629F /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -222,24 +238,10 @@
 		4AA3904A212ADB9200F1629F /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
-				4AA3904B212ADB9200F1629F /* BaseViewController.m */,
 				4AA3904C212ADB9200F1629F /* BaseViewController.h */,
+				4AA3904B212ADB9200F1629F /* BaseViewController.m */,
 			);
 			path = BaseClass;
-			sourceTree = "<group>";
-		};
-		4AA3904D212ADB9200F1629F /* Commands */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Commands;
-			sourceTree = "<group>";
-		};
-		4AA3904E212ADB9200F1629F /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		D66805D28A8E006E33A0C1AA /* Pods */ = {
@@ -449,7 +451,9 @@
 				36290559211051B000FACBCD /* ViewController.m in Sources */,
 				4AA3904F212ADB9200F1629F /* LOCoreDataManager.m in Sources */,
 				4AA39051212ADB9200F1629F /* Model.xcdatamodeld in Sources */,
+				369B0C12216A2B130039C2D4 /* NotePageViewController.m in Sources */,
 				36290564211051B200FACBCD /* main.m in Sources */,
+				369B0C1A216A37380039C2D4 /* LyActionViewController.m in Sources */,
 				36290556211051B000FACBCD /* AppDelegate.m in Sources */,
 				366750EC2129AA3E00FDF116 /* UIDevice+User.m in Sources */,
 				366750E92129990B00FDF116 /* APPFileManager.m in Sources */,
